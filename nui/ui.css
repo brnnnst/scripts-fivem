@@ -1,0 +1,93 @@
+div { border: 0; outline: 0; vertical-align: baseline; background: transparent; margin: 0; padding: 0; }
+:focus { outline: 0; }
+::selection { background: transparent; }
+
+#actionmenu {
+	top: 50%;
+	left: 50%;
+	display: none;
+	position: fixed;
+	transform: translate(-50%,-50%);
+}
+
+#actionmenu button {
+	background: rgba(20,20,20,0.95);
+	width: 250px;
+	height: 40px;
+	border: 0;
+	color: #fff;
+	display: block;
+	font-weight: 700;
+	margin-top: 10px;
+	text-align: center;
+	border-radius: 3px;
+	letter-spacing: 0.5px;
+	padding: 0 20px;
+}
+
+#actionmenu button:hover {
+	background: #fff;
+	color: rgba(5,5,5,1);
+}
+
+l {
+	width: 75%;
+	text-align: left;
+	float: left;
+}
+
+r {
+	color: rgba(255,255,255,0.5);
+	width: 25%;
+	text-align: right;
+	float: left;
+}
+
+.menuoption {
+	color: #FFF;
+	border: 4px solid #000;
+	box-shadow:0px 0px 0px 1px #000 inset;
+	background-color: #000;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+}
+
+.menuoption:hover {
+	border: 4px solid #666;
+	background-color: #FFF;
+	box-shadow:0px 0px 0px 4px #EEE inset;
+}
+
+.menuoption span {
+	transition: all 0.2s ease-out;
+	z-index: 2;
+}
+
+.menuoption:hover span{
+	color: #333;
+}
+  
+.menuoption:after {
+	background: #FFF;
+	border: 0px solid #000;
+	content: "";
+	height: 155px;
+	left: -75px;
+	opacity: .8;
+	position: absolute;
+	top: -50px;
+	-webkit-transform: rotate(35deg);
+			transform: rotate(35deg);
+	width: 50px;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	z-index: 1;
+}
+.menuoption:hover:after {
+	background: #FFF;
+	border: 20px solid #000;
+	opacity: 0;
+	left: 120%;
+	-webkit-transform: rotate(40deg);
+			transform: rotate(40deg);
+}
